@@ -1,0 +1,41 @@
+<?php
+/**
+ * @file
+ * Adds  permissions for clearing Drupal cache
+ * Note: Clearing caches is relatively harmless. Sites might slow down for a bit afterwards while the cache fills back up.
+ * Note: Note that there are sometimes caches other than the Drupal cache that can affect website performance. For example, some hosting services.
+ * Note: Note that this does not clear web browser cache, this will need to be cleared separately. :p
+ * Enabling this module will add a menu link titled "Clear Cache" in the administrative toolbar at the top.
+ */
+
+/**
+ * Implements hook_permission().
+ */
+function clear_cache_permission() {
+  return array(
+    'use clear cache' => array(
+      'title' => t('Can clear cache'),
+    ),
+  );
+}
+
+/**
+ * Implement hook_menu()
+ */
+function clear_cache_menu() { // function to add "clear cache" menu
+  $items = array();
+  $items['admin/clearcache'] = array(
+    'title' => 'Clear Cache',
+    'page callback' => 'clear_cache_action',
+    'access arguments' => array('use clear cache'),
+    'type' => MENU_NORMAL_ITEM,
+    'weight' => 16,
+  );
+  return $items;
+}
+
+function clear_cache_action() {
+  drupal_flush_all_caches(); // will flash all Drupal cache
+  drupal_set_message($message = t('Success! All Drupal Caches cleared.'), $type = 'status'); // displays success message
+  drupal_goto(); // redirects to home page
+}
