@@ -5,7 +5,7 @@ This basic module Clears All Drupal Cache and adds a menu item on the main admin
 
 Adds permissions for clearing Drupal cache
 Note: Clearing caches is relatively harmless. Sites might slow down for a bit afterwards while the cache fills back up.
-Note: There are other caches other than Drupal cache affect website performance. For example, some hosting services.
+Note: There are other caches other than Drupal cache that will affect website performance. For example, some hosting services.
 Note: Clear Cache does not clear web browser cache, this will need to be cleared separately. :p
 Enabling this module will add a menu link titled "Clear Cache" in the administrative tool-bar at the top.
 
