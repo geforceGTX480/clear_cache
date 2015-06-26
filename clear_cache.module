@@ -5,7 +5,7 @@
  * Note: Clearing caches is relatively harmless. Sites might slow down for a bit afterwards while the cache fills back up.
  * Note: Note that there are sometimes caches other than the Drupal cache that can affect website performance. For example, some hosting services.
  * Note: Note that this does not clear web browser cache, this will need to be cleared separately. :p
- * Enabling this module will add a menu link titled "Clear Cache" in the administrative toolbar at the top.
+ * Enabling this module will add a menu link titled "Clear Cache" in the administrative tool-bar at the top.
  */
 
 /**
