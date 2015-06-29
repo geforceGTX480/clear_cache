@@ -1,5 +1,4 @@
 name = Clear Cache
 description = "Clears All Drupal Cache and adds a menu item on the main admin menu,to clear cache based on user permissions."
 core = 7.x
-version = "7.x-1.0"
 package = Clear Cache
